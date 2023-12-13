@@ -1,0 +1,29 @@
+{
+  "WorkflowName": "Rules",
+  "Rules": [
+    {
+      "RuleName": "IsNegative",
+      "SuccessEvent": "Negative",
+      "ErrorMessage": "One or more adjust rules failed.",
+      "ErrorType": "Error",
+      "RuleExpressionType": "LambdaExpression",
+      "Expression": "data.Value < 0"
+    },
+    {
+      "RuleName": "IsZero",
+      "SuccessEvent": "Zero",
+      "ErrorMessage": "One or more adjust rules failed.",
+      "ErrorType": "Error",
+      "RuleExpressionType": "LambdaExpression",
+      "Expression": "data.Value == 0"
+    },
+    {
+      "RuleName": "IsPositive",
+      "SuccessEvent": "Positive",
+      "ErrorMessage": "One or more adjust rules failed.",
+      "ErrorType": "Error",
+      "RuleExpressionType": "LambdaExpression",
+      "Expression": "data.Value > 0"
+    }
+  ]
+}
